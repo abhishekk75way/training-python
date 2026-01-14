@@ -30,7 +30,7 @@ def add_task(task: dict):
     task["id"] = len(tasks) + 1
     task["name"] = task["name"]
     task["is_completed"] = task["is_completed"]
-    task["created_at"] = datetime.now()    
+    task["created_at"] = datetime.now().isoformat()    
     tasks.append(task)
     return {
         "message": "Task added successfully",
